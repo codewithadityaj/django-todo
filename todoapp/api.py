@@ -26,16 +26,16 @@ def create_todoapp(request, data: todoappSchema):
 
 @api.get("/todoapp/", response=List[todoappOutSchema])
 def list_todoapp(request):
-    return todoapp.objects.all()  # Correct model name
+    return todoapp.objects.all() 
 
 @api.get("/todoapp/{todoapp_id}/", response=todoappOutSchema)
 def get_todoapp(request, todoapp_id: int):
-    todoapp_instance = get_object_or_404(todoapp, id=todoapp_id)  # Correct model name
+    todoapp_instance = get_object_or_404(todoapp, id=todoapp_id)  
     return todoapp_instance
 
 @api.put("/todoapp/{todoapp_id}/", response=todoappOutSchema)
 def update_todoapp(request, todoapp_id: int, data: todoappSchema):
-    todoapp_instance = get_object_or_404(todoapp, id=todoapp_id)  # Correct model name
+    todoapp_instance = get_object_or_404(todoapp, id=todoapp_id) 
     for attr, value in data.dict().items():
         if value is not None:  # Optionally check for None before updating
             setattr(todoapp_instance, attr, value)
