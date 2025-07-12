@@ -10,8 +10,7 @@ A simple and user-friendly Todo application built with Django, demonstrating ess
 - Clean UI, optionally using Bootstrap and Django’s message framework
 
 ## Project Structure
-'''bash
-django-todo/
+'''django-todo/
 ├── manage.py
 ├── db.sqlite3           # Default SQLite database (can use Postgres, MySQL, etc.)
 ├── requirements.txt
@@ -32,8 +31,7 @@ django-todo/
 └── project/             # Your Django project settings
     ├── settings.py
     ├── urls.py
-    └── wsgi.py
-'''
+    └── wsgi.py'''
 
 Requirements
 Python 3.x
