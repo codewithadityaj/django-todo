@@ -35,90 +35,69 @@ django-todo/
     └── wsgi.py
 ```
 
-Requirements
+## Requirements
+```
 Python 3.x
 Django ≥3.x
 SQLite (default) — you can update DATABASES in settings.py to use another database
+```
+## Installation
+- Clone your repo
+- git clone https://github.com/codewithadityaj/django-todo.git
+- cd django-todo
 
-Installation
-Clone your repo
-git clone https://github.com/codewithadityaj/django-todo.git
-cd django-todo
 
-
-Create a virtual environment and activate it
-
+## Create a virtual environment and activate it
+```
 python -m venv env
 # On macOS/Linux:
 source env/bin/activate
 # On Windows:
 .\env\Scripts\activate
-Install dependencies
+```
 
-nginx
-Copy
-Edit
-pip install -r requirements.txt
+## Install dependencies
+- pip install -r requirements.txt
+
 Make and apply migrations
-
-nginx
-Copy
-Edit
+```
 python manage.py makemigrations
-python manage.py migrate
-(Optional) Create a superuser
+python manage.py migrate(Optional)
 
-nginx
-Copy
-Edit
+#Create a superuser
 python manage.py createsuperuser
-Run the development server
 
-nginx
-Copy
-Edit
+#Run the development server
 python manage.py runserver
+```
+
 Visit this URL in your browser:
-http://127.0.0.1:8000/todo/
+- http://127.0.0.1:8000/todo/
 
 Usage
-Add a task via the “Create Task” page
-
-Check/uncheck tasks to mark them complete/incomplete
-
-Edit or delete tasks using the action buttons
-
-Optionally filter tasks by status or date (if implemented)
-
-Optionally login to access admin interface or user-specific data
+- Add a task via the “Create Task” page
+- Check/uncheck tasks to mark them complete/incomplete
+- Edit or delete tasks using the action buttons
+- Optionally filter tasks by status or date (if implemented)
+- Optionally login to access admin interface or user-specific data
 
 Recommended Enhancements
-Add user authentication to enable per-user task lists
+- Add user authentication to enable per-user task lists
+- Use Django’s message framework for notifications
+- Style the app using Bootstrap/Tailwind for better UI
+- Extend the Task model to include fields like due date, priority, tags
+- Convert to class-based views (ListView, CreateView, etc.) for cleaner code
+- Add pagination or search functionality
 
-Use Django’s message framework for notifications
+## Security & Deployment Tips
 
-Style the app using Bootstrap/Tailwind for better UI
+- Enable DEBUG = False in settings.py for production
+- Use a strong SECRET_KEY and store it securely
+- Serve static files via WhiteNoise or a dedicated static server
+- Use HTTPS and secure database credentials
+- Consider deploying with Gunicorn + Nginx on a VPS or cloud platform
 
-Extend the Task model to include fields like due date, priority, tags
-
-Convert to class-based views (ListView, CreateView, etc.) for cleaner code
-
-Add pagination or search functionality
-
-Security & Deployment Tips
-Enable DEBUG = False in settings.py for production
-
-Use a strong SECRET_KEY and store it securely
-
-Serve static files via WhiteNoise or a dedicated static server
-
-Use HTTPS and secure database credentials
-
-Consider deploying with Gunicorn + Nginx on a VPS or cloud platform
-
-License
-This project is open-source and available under the MIT License. See the LICENSE file for details.
 
 Author
-Aditya Ashok Jadhav
+- Aditya Ashok Jadhav
 GitHub
